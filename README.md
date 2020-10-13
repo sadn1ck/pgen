@@ -1,4 +1,4 @@
-# pgen - simple password CLI generator written in C++
+# pgen - simple CLI password generator written in C++
 
  
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
@@ -7,7 +7,7 @@
 ## Requirements: 
 - gcc
 - make
-- existing ~/.local/bin in your PATH
+- ~/.local/bin in your PATH
 
 ## Steps:
 ```bash
@@ -17,12 +17,13 @@ $ git clone https://github.com/sadn1ck/pgen
 
 $ cd pgen
 
-# Add this line to your bashrc or zshrc
-# Change YOURUSERNAME with your user
-# # export PATH=/home/YOURUSERNAME/.local/bin:$PATH
+$ mkdir -p ~/.local/bin/
+
 $ vim ~/.bashrc
 
-$ mkdir -p ~/.local/bin/
+# Add this line to your bashrc or zshrc
+# export PATH=/home/YOURUSERNAME/.local/bin:$PATH
+# Change YOURUSERNAME with your user
 
 # To build the binary from the source files
 $ make build
