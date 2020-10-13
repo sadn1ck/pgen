@@ -1,5 +1,6 @@
 # custom
 bin
+.vscode
 
 # Prerequisites
 *.d

@@ -17,4 +17,3 @@ install:
 build:
 	mkdir $(BUILD)
 	$(CC) $(SRC) $(CXX_FLAGS) -o ./$(BUILD)/$(EXEC)
-
