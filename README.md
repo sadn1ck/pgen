@@ -1,8 +1,9 @@
 # pgen - simple CLI password generator written in C++
 
  
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-
+<a href="./LICENSE">
+<img src="https://img.shields.io/github/license/sadn1ck/pgen?style=flat-square">
+</a>
 
 ## Requirements: 
 - gcc

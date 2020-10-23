@@ -5,13 +5,13 @@
 Pgen::Pgen() {}
 Pgen::~Pgen() {}
 
-bool Pgen::isValid(const char *param) {
-  std::string s = std::string(param);
+bool Pgen::isValid(const char *parameter) {
+  std::string s = std::string(parameter);
   auto it = s.begin();
   while (it != s.end() && std::isdigit(*it))
     ++it;
   return (!s.empty() && it == s.end()) &&
-         (std::stoi(param) >= 8 && std::stoi(param) <= 100);
+         (std::stoi(parameter) >= 8 && std::stoi(parameter) <= 100);
 }
 
 void Pgen::showHelp() {
