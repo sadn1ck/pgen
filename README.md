@@ -38,5 +38,5 @@ $ make # or make all
 ## WIP
 - [ ] Tests
 - [ ] Docs 
-- [ ] Separation into proper header files
+- [x] Separation into proper header files
 

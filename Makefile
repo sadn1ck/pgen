@@ -1,5 +1,5 @@
-CC = g++
-CXX_FLAGS = 
+CXX = g++
+CXX_FLAGS = -std=c++17
 
 SRC = src/*.cpp
 BUILD = bin
@@ -16,4 +16,4 @@ install:
 
 build:
 	mkdir $(BUILD)
-	$(CC) $(SRC) $(CXX_FLAGS) -o ./$(BUILD)/$(EXEC)
+	$(CXX) $(SRC) $(CXX_FLAGS) -o ./$(BUILD)/$(EXEC)
