@@ -1,14 +1,14 @@
 # pgen - simple CLI password generator written in C++
 
- 
-<a href="./LICENSE">
-<img src="https://img.shields.io/github/license/sadn1ck/pgen?style=flat-square">
-</a>
+<img src="https://forthebadge.com/images/badges/made-with-c-plus-plus.svg">
+<img src="https://forthebadge.com/images/badges/uses-git.svg">
+<img src="https://forthebadge.com/images/badges/powered-by-electricity.svg">
+
 
 ## Requirements: 
-- gcc
+- gcc/g++
 - make
-- ~/.local/bin in your PATH
+- ~/.local/bin in your PATH environment variable
 
 ## Steps:
 ```bash
@@ -38,6 +38,6 @@ $ make # or make all
 
 ## WIP
 - [ ] Tests
-- [ ] Docs 
+- [x] Docs 
 - [x] Separation into proper header files
 
