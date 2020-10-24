@@ -10,18 +10,19 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
 
+      - name: Building binary and SHA256SUM
+        run: make;sha256sum build/pgen | cut -c 1-64 > build/SHA256SUM;zip --junk-paths pgen build/*
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: make;sha256sum build/pgen | cut -c 1-64 > build/SHA256SUM;zip --junk-paths pgen build/*
         with:
           tag_name: ${{ github.ref }}
           release_name: Release ${{ github.ref }}
           draft: false
           prerelease: false
-          
+
       - name: Upload Release Asset
         id: upload-release-asset
         uses: actions/upload-release-asset@v1
