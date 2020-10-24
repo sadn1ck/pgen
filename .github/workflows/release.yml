@@ -1,4 +1,4 @@
-name: Doxygen Generate and Deploy Docs
+name: Create release and upload asset
 
 on:
   push:
@@ -9,20 +9,6 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v2
-
-      - name: Doxygen Action
-        uses: mattnotmitt/doxygen-action@v1
-        with:
-          # Path to Doxyfile
-          doxyfile-path: "./Doxyfile" # default is ./Doxyfile
-          # Working directory
-          working-directory: "." # default is .
-
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./html
 
       - name: Create Release
         id: create_release
@@ -35,7 +21,7 @@ jobs:
           release_name: Release ${{ github.ref }}
           draft: false
           prerelease: false
-
+          
       - name: Upload Release Asset
         id: upload-release-asset
         uses: actions/upload-release-asset@v1
