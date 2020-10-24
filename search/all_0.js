@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['extra_0',['EXTRA',['../classPgen.html#ac11ac12661638bfd5902f77bba949718',1,'Pgen']]]
+  ['pgen_20_2d_20simple_20cli_20password_20generator_20written_20in_20c_2b_2b_0',['pgen - simple CLI password generator written in C++',['../index.html',1,'']]]
 ];
