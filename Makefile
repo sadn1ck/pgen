@@ -2,18 +2,23 @@ CXX = g++
 CXX_FLAGS = -std=c++17
 
 SRC = src/*.cpp
-BUILD = bin
+INCLUDE := include/
+
+BUILD = build
 EXEC = pgen
 
 all: clean build install
 
 clean:
-	rm -rf ./$(BUILD)
-	rm ~/.local/bin/$(EXEC)
+	@echo "-> Removing build files and copied binary"
+	@rm -rf ./$(BUILD)
+	@rm ~/.local/bin/$(EXEC)
 
 install:
-	cp ./$(BUILD)/$(EXEC) ~/.local/bin/
+	@echo "-> Copying binary to ~/.local/bin"
+	@cp ./$(BUILD)/$(EXEC) ~/.local/bin/
 
 build:
-	mkdir $(BUILD)
-	$(CXX) $(SRC) $(CXX_FLAGS) -o ./$(BUILD)/$(EXEC)
+	@echo "-> Creating build directory"
+	@mkdir $(BUILD)
+	$(CXX) -I$(INCLUDE) $(SRC) $(CXX_FLAGS) -o ./$(BUILD)/$(EXEC)
