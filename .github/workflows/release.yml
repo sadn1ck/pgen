@@ -11,7 +11,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Building binary and SHA256SUM
-        run: make;sha256sum build/pgen | cut -c 1-64 > build/SHA256SUM;zip --junk-paths pgen build/*
+        run: make build;sha256sum build/pgen | cut -c 1-64 > build/SHA256SUM;zip --junk-paths pgen build/*
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
