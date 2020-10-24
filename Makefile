@@ -21,4 +21,5 @@ install:
 build:
 	@echo "-> Creating build directory"
 	@mkdir $(BUILD)
+	@echo "-> Building..."
 	$(CXX) -I$(INCLUDE) $(SRC) $(CXX_FLAGS) -o ./$(BUILD)/$(EXEC)
