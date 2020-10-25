@@ -11,19 +11,18 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Building binary and SHA256SUM
+        id: build
         run: |
-          make build
-          sha256sum build/pgen | cut -c 1-64 > build/SHA256SUM
-          zip --junk-paths pgen build/*
-          echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
+          make build;sha256sum build/pgen | cut -c 1-64 > build/SHA256SUM;zip --junk-paths pgen build/*;echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
+
       - name: Create Release
         id: create_release
         uses: actions/create-release@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          tag_name: ${{ steps.create_release.outputs.sha_short }}
-          release_name: pgen - build ${{ steps.create_release.outputs.sha_short }}
+          tag_name: ${{ steps.build.outputs.sha_short }}
+          release_name: pgen - build ${{ steps.build.outputs.sha_short }}
           draft: false
           prerelease: false
 
