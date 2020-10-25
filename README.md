@@ -26,6 +26,8 @@ $ vim ~/.bashrc
 # export PATH=/home/YOURUSERNAME/.local/bin:$PATH
 # Change YOURUSERNAME with your user
 
+$ source ~/.bashrc
+
 # To build the binary from the source files
 $ make build
 
