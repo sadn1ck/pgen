@@ -43,3 +43,4 @@ $ make # or make all
 - [x] Docs 
 - [x] Separation into proper header files
 
+<img src="images/screen.png">
