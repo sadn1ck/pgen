@@ -60,7 +60,5 @@ int main(int argc, char **argv)
         pgen.showHelp();
         return 127;
     }
-    /**< Destroying object before exit */
-    pgen.~Pgen();
     return 0;
 }
