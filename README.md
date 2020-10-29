@@ -23,7 +23,8 @@ $ mkdir -p ~/.local/bin/
 $ vim ~/.bashrc
 
 # Add this line to your bashrc or zshrc
-# export PATH=/home/YOURUSERNAME/.local/bin:$PATH
+# $USER = your username
+# export PATH=/home/$USER/.local/bin:$PATH
 # Change YOURUSERNAME with your user
 
 $ source ~/.bashrc
