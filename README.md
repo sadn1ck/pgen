@@ -1,14 +1,11 @@
-# pgen - simple CLI password generator written in C++
-
-<img src="https://forthebadge.com/images/badges/made-with-c-plus-plus.svg">
-<img src="https://forthebadge.com/images/badges/uses-git.svg">
-<img src="https://forthebadge.com/images/badges/powered-by-electricity.svg">
+# pgen - Simple Password Generator CLI written in C++
+<img src="https://socialify.git.ci/sadn1ck/pgen/image?description=1&language=1&owner=1&pattern=Circuit%20Board&pulls=1&stargazers=1&theme=Light">
 
 
 ## Requirements: 
-- gcc/g++
-- make
-- ~/.local/bin in your PATH environment variable
+- `gcc/g++`
+- `make`
+- `~/.local/bin` in your PATH environment variable
 
 ## Steps:
 ```bash
