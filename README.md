@@ -1,13 +1,15 @@
 # pgen - Simple Password Generator CLI written in C++
+
 <img src="https://socialify.git.ci/sadn1ck/pgen/image?description=1&language=1&owner=1&pattern=Circuit%20Board&pulls=1&stargazers=1&theme=Light">
 
+## Requirements:
 
-## Requirements: 
 - `gcc/g++`
 - `make`
 - `~/.local/bin` in your PATH environment variable
 
 ## Steps:
+
 ```bash
 $ sudo apt-get install gcc make
 
@@ -22,7 +24,7 @@ $ vim ~/.bashrc
 # Add this line to your bashrc or zshrc
 # $USER = your username
 # export PATH=/home/$USER/.local/bin:$PATH
-# Change YOURUSERNAME with your user
+# Change $USER with your user
 
 $ source ~/.bashrc
 
@@ -37,8 +39,9 @@ $ make # or make all
 ```
 
 ## WIP
+
 - [ ] Tests
-- [x] Docs 
+- [x] Docs
 - [x] Separation into proper header files
 
 <img src="images/screen.png">
